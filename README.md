@@ -8,3 +8,15 @@
 
 - HTML
 - CSS
+
+## Day 2
+
+- Created some HTML pages
+- CSS grid and flexbox
+- Javscript functions, request IBGE API using fetch()
+
+## Day 3
+
+- Created others HTML pages
+- Modal with Javascript
+- New features CSS - grid template, object-fit for img
