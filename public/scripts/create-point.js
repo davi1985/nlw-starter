@@ -13,7 +13,7 @@ function populateUFs() {
 
 function getCities(event) {
   const citySelect = document.querySelector("select[name=city]");
-  const stateInput = document.querySelector("input[name=state]");
+  const stateInput = document.querySelector("input[name=state]"); // input hidden
 
   const ufValue = event.target.value;
 
@@ -35,42 +35,42 @@ function getCities(event) {
     });
 }
 
-populateUFs();
+populateUFs(); // execute the function
 
 document.querySelector("select[name=uf]").addEventListener("change", getCities);
 
+// items
 const itemsToCollect = document.querySelectorAll(".items-grid li");
 
 for (const item of itemsToCollect) {
   item.addEventListener("click", handleSelectedItem);
 }
 
-const collectedItems = document.querySelector("input[name=items]");
+const collectedItems = document.querySelector("input[name=items]"); // input hidden
 let selectedItems = [];
 function handleSelectedItem(event) {
   const itemLi = event.target;
-  // add or remove class
+  // add or remove class in html
   itemLi.classList.toggle("selected");
 
   const itemId = itemLi.dataset.id;
 
-  //verificar se existem items
-  //pegar items selecionados
+  // verify if there is items and get all items selecteds
   const alreadySelecyed = selectedItems.findIndex((item) => {
     return item == itemId; // true or false
   });
 
   if (alreadySelecyed >= 0) {
-    //se ja estiver selecionado tirar da seleção
+    // if already selected - remove
     const filteredItems = selectedItems.filter((item) => {
       const itemIsDifferent = item != itemId;
       return itemIsDifferent;
     });
     selectedItems = filteredItems;
   } else {
-    //se não estiver selecionado adicionar
+    // if it is not selected - add
     selectedItems.push(itemId);
   }
-  // atualizar o campo escondido com os itens
+  // update hidden input with all selected items
   collectedItems.value = selectedItems;
 }

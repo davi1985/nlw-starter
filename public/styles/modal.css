@@ -85,3 +85,22 @@
     line-height: 28px;
   }
 }
+
+/* when created point */
+#modal.point{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#modal.point h1 {
+  color: white;
+  margin-top: 32px;
+}
+
+#modal.point img.error {
+  border-radius: 8px;
+  padding: 12px;
+  background-color: red;
+}

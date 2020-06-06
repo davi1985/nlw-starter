@@ -1,7 +1,7 @@
 <h1> Next Level Week</h1>
 
 <div style="text-align:center">
-  <img src="assets/img/nlw.png"/>
+  <img src="public/assets/img/nlw.png"/>
 </div>
 
 ## Day 1 Intro
@@ -20,3 +20,12 @@
 - Created others HTML pages
 - Modal with Javascript
 - New features CSS - grid template, object-fit for img
+
+## Day 4
+
+- Intro Node.js in back end
+- Template Engine: Nunjuks
+
+## Day 5
+
+- Working data in back end with Node and Nunjucks

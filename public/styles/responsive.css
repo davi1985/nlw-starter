@@ -7,7 +7,9 @@
     align-items: center;
     text-align: center;
   }
-
+  #page-create-point header {
+    padding: 0px 42px;
+  }
   #page-home header a {
     position: absolute;
     bottom: 48px;
@@ -34,6 +36,14 @@
   #page-search-results .cards img {
     height: 200px;
   }
+
+  #page-create-point .field-group {
+    flex-direction: column;
+  }
+
+  #page-create-point .field-group .field + .field {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -55,8 +65,14 @@
   }
 }
 
-@media (max-height: 770px) {
+@media (min-height: 770px) {
   #page-home {
     background-position-y: 200px;
+  }
+  #page-create-point form {
+    max-width: 90%;
+  }
+  .items-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
