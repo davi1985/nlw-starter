@@ -72,4 +72,4 @@ server.get("/search", (req, res) => {
 });
 
 // start server in port 3000
-server.listen(3004);
+server.listen(3000);
