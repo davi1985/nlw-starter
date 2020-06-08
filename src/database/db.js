@@ -1,7 +1,7 @@
-const sqlite3 = require("sqlite3").verbose();
+const sqlite3 = require('sqlite3').verbose();
 
 // build database object
-const db = new sqlite3.Database("./src/database/database.db");
+const db = new sqlite3.Database('./src/database/database.db');
 
 // using database object
 db.serialize(() => {
@@ -17,8 +17,7 @@ db.serialize(() => {
   //     city TEXT,
   //     items TEXT
   //   );
-  // `)
-
+  // `);
   // // insert data in table
   // const query = `INSERT INTO places (
   //     name,
@@ -38,7 +37,6 @@ db.serialize(() => {
   //   "Rio do Sul",
   //   "1,2"
   // ];
-
   // function afterInsertData(error) {
   //   if (error) {
   //     console.log(error)
@@ -47,7 +45,6 @@ db.serialize(() => {
   //   console.log(this);
   // }
   // db.run(query, values, afterInsertData)
-
   // get all from table
   // db.all(`SELECT * FROM places`, function (error, rows) {
   //   if (error) {
@@ -56,17 +53,13 @@ db.serialize(() => {
   //   console.log("Registros");
   //   console.log(rows)
   // })
-
-  // delete 
+  // delete
   // db.run(`DELETE FROM places WHERE id= ?`, [2], function (error) {
   //   if (error) {
   //     console.log(error)
   //   }
   //   console.log('Registro deletado com sucesso')
   // })
-
-
-
 });
 
 module.exports = db;
